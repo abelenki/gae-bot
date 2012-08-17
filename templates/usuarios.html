@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="author" content="rafael" />
+		<title>GAE Notify</title>
+		<!-- Date: 2012-03-12 -->
+		
+		<script src="/static/js/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/static/css/estilosNotificacao.css">
+	</head>
+	
+	
+	<body>
+	
+		<div id="container">
+		
+			<div id="header">
+				<div class="shadow"></div>
+			</div>
+			
+			<div id="content">
+				<ul class="lista_de_alcas">
+					<li>
+						<ul class="lista_alca_selecionada" name="lst_alca">
+							<li class="linha_fdo_esquerdo"></li>
+							<li class="linha_fdo_meio">
+								<h2 class="titulo_alca">Usuários</h2>
+							</li>
+							<li class="linha_fdo_direito"></li>
+						</ul>
+					</li>
+				</ul>
+							
+				<div id="dv_notificacao">
+					<table cellpadding="0" cellspacing="0" border="0" id="tbl_notificacao">
+						<thead>
+							<tr class="tr_fundoIndices">
+								<th>
+									Usuário:
+								</th>
+								<th>
+									Grupos:
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for u in usuarios%}
+							<tr>
+								<td valign="top">
+									{{u.mail}}
+								</td>
+								<td valign="top">
+									{%for g in u.groups%}
+										{{g}},
+									{%endfor%}
+								</td>
+							</tr>
+							{%endfor%}
+						</tbody>
+					</table>
+				</div>
+				&nbsp;&nbsp;<a href="/adm/index">&gt;Grupos</a><br/>
+				&nbsp;&nbsp;<a href="/adm/mensagem">&gt;Enviar Mensagem</a><br/>
+			</div> <!-- /content -->
+			
+		</div> <!-- /container -->		
+			
+	</body>
+</html>

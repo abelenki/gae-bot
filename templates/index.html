@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="author" content="rafael" />
+		<title>GAE Notify</title>
+		<!-- Date: 2012-03-12 -->
+		
+		<script src="/static/js/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/static/css/estilosNotificacao.css">
+	</head>
+	
+	
+	<body>
+	
+		<div id="container">
+		
+			<div id="header">
+				<div class="shadow"></div>
+			</div>
+			
+			<div id="content">
+				<ul class="lista_de_alcas">
+					<li>
+						<ul class="lista_alca_selecionada" name="lst_alca">
+							<li class="linha_fdo_esquerdo"></li>
+							<li class="linha_fdo_meio">
+								<h2 class="titulo_alca"> Groups </h2>
+							</li>
+							<li class="linha_fdo_direito"></li>
+						</ul>
+					</li>
+				</ul>
+							
+				<div id="dv_notificacao">
+				
+					<table cellpadding="0" cellspacing="0" border="0" id="tbl_notificacao">
+						<thead>
+							<tr class="tr_fundoIndices">
+								<th>
+									User:
+								</th>
+								<th>
+									Groups:
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td valign="top">
+									<div>
+										<a href="#">{{usuario}}</a>
+									</div>
+								</td>
+								<td valign="top">
+									<table>
+										<form action="#" name="form_grupo" id="form_grupo">
+										<tr>
+											<td class="primeira_linha">
+												<div>
+												<select id="sowned" name="sowned" multiple>
+													{%for grp in user_groups%}
+														<option value="{{grp}}">{{grp}}</option>
+													{%endfor%}
+												</select>
+												</div>
+												<a href="#" id="remove"> remove &gt;&gt;</a>  
+											</td>
+											<td>
+												<div>
+												<select id="sall" name="sall" multiple>
+													{%for grp in all_groups%}
+														<option value="{{grp}}">{{grp}}</option>
+													{%endfor%}
+												</select>
+												</div>
+												<a href="#" id="add">&lt;&lt; add </a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="text" value="Crie um novo grupo" id="novoGrupo" name="novoGrupo">
+												<input type="button" value="" id="bt_ok" name="bt_ok">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="button" value="Salvar" id="bt_save" name="bt_save">
+												<input type="hidden" value="{{usuario}}" id="mail" name="mail">
+											</td>
+										</tr>
+										</form>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				
+				</div>
+				&nbsp;&nbsp;<a href="/adm/usuarios">&gt;Users</a><br/>
+				&nbsp;&nbsp;<a href="/adm/mensagem">&gt;Send Message</a><br/>
+			</div> <!-- /content -->
+			
+		</div> <!-- /container -->		
+			
+	</body>
+	<script src="/static/js/funcoesNotificacao.js"></script>
+	<script src="/static/js/notifier.js"></script>
+</html>

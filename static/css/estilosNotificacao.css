@@ -1,0 +1,222 @@
+html{
+	height:100%;
+}
+
+body{
+  font-family:Arial, Verdana, Tahoma;
+  height:98%;
+  _height:90%;
+  margin:0;
+  padding:0;
+  font-size:12px;
+}
+
+#container {
+	margin:0 auto;
+	height:89.5%;
+	margin:7px;
+	margin-bottom:0px;
+	margin-top:0;
+	_margin-top:7px;
+}
+
+a{
+	text-decoration:none;
+	color:#f60;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+h1{
+  display:block;
+  font: bold 20px Arial, Verdana, Tahoma;
+  color:#F60;
+  height:48px;
+  margin:5px 0 8px 0;
+  _margin:0px 0px 8px 0px;
+  padding:0;
+  /*text-align:center;*/
+  border:solid 1px #CCC;
+  background:#FFF url(../imagens/img_fdo_header.gif) repeat-x;
+}
+
+h2{
+  font: normal 11px Arial, Verdana, Tahoma;
+  color:#666;
+  line-height:20px;
+  margin:0 4px 0;
+  float:left;
+}
+
+.tit_projeto {
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:10px;
+	clear:left;
+	color:#ff6531;
+}
+
+h3{
+  font: bold 16px Arial, Verdana, Tahoma;
+  border-bottom:solid 2px #EFEFEF;
+  width:50%;
+  color:#F60;
+  text-indent:10px;
+  line-height:30px;
+  margin:0 4px 10px 4px;
+}
+
+.shadow {
+  background:#FFF url(../imagens/opt_shadow.gif) repeat-x;
+  height:19px;
+  clear:both;
+}
+
+#content {
+	margin-top: 30px;
+	border:1px solid #CCC;
+	border-bottom:3px solid #F60;
+	padding-bottom:10px;
+	background-color:#fff;
+	/*min-width:1160px;*/
+	margin-bottom:10px;
+	clear: none; float: left !important; position: relative; width: 100%;
+}
+
+.lista_alca, .lista_de_alcas {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	margin-top:-36px;
+	margin-left:-1px;
+	float:left;
+	z-index:9999;
+	_position:absolute;
+	/*_top:0px;*/
+	_left:auto;
+}
+
+.lista_alca {
+	_margin-left:-208px;
+}
+
+.lista_de_alcas li ul.lista_alca_selecionada {
+	
+}
+
+.lista_alca li a img {
+	border:0;
+}
+
+.lista_alca li, .lista_de_alcas li {
+	height:36px;
+	float:left;
+}
+
+.lista_de_alcas li ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	margin-right:3px;
+}
+
+.linha_fdo_esquerdo, .linha_fdo_direito {
+	width:10px;
+}
+
+.linha_fdo_esquerdo {
+	background: url('../imagens/img_alca_esq.gif') no-repeat;
+}
+
+.linha_fdo_direito {
+	background: url('../imagens/img_alca_dir.gif') no-repeat;
+}
+
+.linha_fdo_meio {
+	background: url('../imagens/img_alca_meio.gif') repeat-x;
+	text-align:center;
+}
+
+.titulo_alca {
+	margin:7px 5px 5px 0px;
+	padding:0;
+	width:70px;
+	color:#fe6015;
+	font-size:15px;
+}
+
+#tbl_notificacao {
+	margin:10px;
+	border:1px #ccc solid;
+	width:98.5%;
+}
+
+.tr_fundoIndices {
+	background: url("../imagens/fhbg.gif") repeat-x scroll center top #FAFAFA;
+    border-color: #CCCCCC #CCCCCC -moz-use-text-color;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    overflow: hidden;
+	height:24px;
+}
+
+#tbl_notificacao th {
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	padding-left: 10px;
+	height: 26px;
+	padding-top: 0px;
+}
+
+#tbl_notificacao tbody tr td {
+	padding: 5px 10px;
+	color: #999;
+	border-left: 1px solid #EEE;
+}
+
+#tbl_notificacao tbody tr td table tr td {
+	padding: 0px;
+	border-left: none;
+	padding-top:5px;
+}
+
+.primeira_linha {
+	padding-top:0px !important;
+}
+
+#tbl_notificacao thead tr th:first-child {
+	width:150px;
+}
+
+#tbl_notificacao tbody tr td table tr td label {
+	float:left;
+}
+
+#tbl_notificacao tbody tr td table tr td img {
+	float:left;
+	padding-left:5px;
+	width: 12px;
+	padding-top: 1px;
+	cursor:hand;
+	cursor:pointer;
+	border:0;
+}
+
+#novoGrupo {
+	float:left;
+	color:#ccc;
+}
+
+#bt_ok {
+	background: url("../imagens/fdo_bot_ok_menor.png") repeat-x center top #FAFAFA;
+	height: 23px;
+	width: 26px;
+	border: none;
+	cursor:hand;
+	cursor:pointer;
+	margin-top: 1px;
+}

@@ -1,0 +1,20 @@
+total_storage_limit: 500M
+
+queue:
+- name: invite
+  rate: 10/s
+  retry_parameters:
+    min_backoff_seconds: 10
+    max_backoff_seconds: 200
+    max_doublings: 2
+    task_age_limit: 30m
+    
+- name: notify
+  rate: 120/s
+  retry_parameters:
+    min_backoff_seconds: 10
+    max_backoff_seconds: 200
+    max_doublings: 2
+    task_age_limit: 6h
+
+    
